@@ -41,3 +41,19 @@ Portföy projemin amacı, sahip olduğum yetkinlikleri ve deneyimlerimi somut ö
 📊 Chart kullanılarak verilerin görselleştirilmesi sağlandı.
 
 ### Veri Tabanı Modeli
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/modal1.png)
+
+### Kullanıcı Arayüzü
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/kullanici.png)
+
+### Admin Arayüzü
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/yetenek_liste.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/yetenek_guncelle.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/istatistik.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/grafik.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/mesajlar.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/mesaj_detay.png)
+![](https://github.com/berkiskitoglu/Portfolio/blob/main/image/modalmesaj.png)
+
+
+
