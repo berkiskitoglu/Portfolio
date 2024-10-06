@@ -1,0 +1,64 @@
+﻿@model List<PortfolioProject.Models.Contact>
+@{
+    ViewBag.Title = "OpenMesaj";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+   
+        <th>Gönderen</th>
+        <th>Tarih</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+          
+            <td>@item.NameSurname</td>
+            <td>@item.SendDate</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+        </tr>
+    }
+
+
+
+</table>
+<br />
+<button type="button" class="btn btn-primary" style="background-color:#d55555; color:white" data-toggle="modal" data-target="#Modal1">Popup Penceresi</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Mesaj Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Ad Soyad</th>
+                        <th>Gönderme Tarihi</th>
+                        <th>Konu</th>
+                        <th>Mesaj</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.NameSurname</td>
+                        <td>@item.SendDate</td>
+                        <td>@item.Subject</td>
+                        <td>@item.Message</td>
+                    </tr>
+                    }
+                </table>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+      
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿@model List<PortfolioProject.Models.Contact>
+
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
+}
+
+ 
+    
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gönderen</th>
+        <th>Tarih</th>
+        <th>Konu</th>
+        <th>Durum</th>
+        <th>Mesajı Aç</th>
+        <th>Mesajı Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.SendDate</td>
+
+
+            @if (item.Subject == "Proje Talebi")
+            {
+                <td style="color:#ff6a00;">@item.Subject</td>
+            }
+            @if (item.Subject == "Öneri")
+            {
+                <td style="color:lawngreen;">@item.Subject</td>
+            }
+            @if (item.Subject == "Şikayet")
+            {
+                <td style="color:red;">@item.Subject</td>
+            }
+            @if (item.Subject == "Referans")
+            {
+                <td style="color:#2dc3de;">@item.Subject</td>
+            }
+
+
+            @if (item.IsRead == false)
+            {
+                <td><a href="/Mesaj/ChangeMessageStatusToTrue/@item.ContactId" class="btn btn-outline-dark">Okundu Olarak İşaretle</a></td>
+            }
+            else
+            {
+                <td><a href="/Mesaj/ChangeMessageStatusToFalse/@item.ContactId" class="btn btn-outline-success">Okunmadı Olarak İşaretle</a></td>
+            }
+
+
+            <td><a href="/Mesaj/OpenMesaj/@item.ContactId" class="btn btn-warning">Mesajı Aç</a></td>
+            <td><a href="/Mesaj/DeleteMesaj/@item.ContactId" class="btn btn-danger">Mesajı Sil</a></td>
+        </tr>
+    }
+
+   
+
+</table>
+
